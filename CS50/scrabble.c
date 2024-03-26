@@ -32,8 +32,7 @@ int compute_score(char word[]) {
 
   for (int i = 0, len = strlen(word); i < len; i++) {
     if (isupper(word[i])) {
-      score += POINTS[word[i] - 'A'];
-    } else if (islower(word[i])) {
+      score += POINTS[word[i] - 'A']; } else if (islower(word[i])) {
       score += POINTS[word[i] - 'a'];
     }
   }
