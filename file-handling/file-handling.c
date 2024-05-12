@@ -1,23 +1,28 @@
-
-// C Program to illustrate file opening
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
-{
-	// file pointer variable to store the value returned by
-	// fopen
-	FILE* fptr;
+// int main() {
+//   FILE* fptr;
+//   fptr = fopen("forloop.txt", "w");
+//   char name[] = "Shyam";
 
-	// opening the file in read mode
-	fptr = fopen("filename.txt", "w");
+//   for (int i = 0; name[i]!='\0'; i++) {
+//     putc(name[i], fptr);
+//   }
 
-	// checking if the file is opened successfully
-	if (fptr == NULL) {
-		printf("The file is not opened. The program will "
-			"now exit.");
-		exit(0);
-	}
+//   fclose(fptr);
+// }
 
-	return 0;
+int main() {
+  FILE* fptr;
+  fptr = fopen("test.txt", "w");
+  fprintf(fptr, "%d", 45);
+  fclose(fptr);
+
+
+  //fscanf() 
+  fptr = fopen("test.txt", "r");
+  int num;
+  fscanf(fptr, "%d", num);
+  printf("Value = %d\n", num);
+  fclose(fptr);
 }

@@ -1,3 +1,5 @@
+// Program to find the sum of two integer numbers
+
 #include <stdio.h>
 
 int main() {
